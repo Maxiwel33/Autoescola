@@ -1,0 +1,241 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{E317C753-40A9-405E-9714-7054B7A7B95D}</ProjectGuid>
+			<MainSource>Autoescola.dpr</MainSource>
+			<ProjectVersion>12.2</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_ExeOutput>C:\Autoescola\fontes\Debug\Win32\</DCC_ExeOutput>
+			<DCC_DcuOutput>C:\Autoescola\Units\</DCC_DcuOutput>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Autoescola.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="U_principal.pas">
+				<Form>Frm_principal</Form>
+			</DCCReference>
+			<DCCReference Include="U_Modulo.pas">
+				<Form>DM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="U_cliente.pas">
+				<Form>Frm_cliente</Form>
+			</DCCReference>
+			<DCCReference Include="U_Funcionario.pas">
+				<Form>Frm_funcionarios</Form>
+			</DCCReference>
+			<DCCReference Include="U_Transporte.pas">
+				<Form>Frm_transporte</Form>
+			</DCCReference>
+			<DCCReference Include="U_Categoria.pas">
+				<Form>Frm_categoria</Form>
+			</DCCReference>
+			<DCCReference Include="U_Agendamento.pas">
+				<Form>Frm_agendamento</Form>
+			</DCCReference>
+			<DCCReference Include="U_Patrimonio.pas">
+				<Form>Frm_patrimonio</Form>
+			</DCCReference>
+			<DCCReference Include="U_Parcelas.pas">
+				<Form>Frm_Parcelas</Form>
+			</DCCReference>
+			<DCCReference Include="U_PagParcela.pas">
+				<Form>Frm_pagParcelas</Form>
+			</DCCReference>
+			<DCCReference Include="U_TipoPagamento.pas">
+				<Form>Frm_TipoPagamento</Form>
+			</DCCReference>
+			<DCCReference Include="U_TipoSaida.pas">
+				<Form>Frm_tiposaida</Form>
+			</DCCReference>
+			<DCCReference Include="U_LivroCaixa.pas">
+				<Form>Frm_livrocaixa</Form>
+			</DCCReference>
+			<DCCReference Include="U_Oficina.pas">
+				<Form>Frm_Oficina</Form>
+			</DCCReference>
+			<DCCReference Include="U_Login.pas">
+				<Form>Frm_login</Form>
+			</DCCReference>
+			<DCCReference Include="U_Manutencao.pas">
+				<Form>Frm_manutencao</Form>
+			</DCCReference>
+			<DCCReference Include="U_Gastos.pas">
+				<Form>Frm_gastos</Form>
+			</DCCReference>
+			<DCCReference Include="U_Backup.pas">
+				<Form>Frm_Backup</Form>
+			</DCCReference>
+			<DCCReference Include="U_ControleAbastecimento.pas">
+				<Form>Frm_Abastecimento</Form>
+			</DCCReference>
+			<DCCReference Include="U_Posto.pas">
+				<Form>Frm_posto</Form>
+			</DCCReference>
+			<DCCReference Include="U_Sobre.pas">
+				<Form>frm_sobre</Form>
+			</DCCReference>
+			<DCCReference Include="U_Empresa.pas">
+				<Form>Frm_empresa</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelCliente.pas">
+				<Form>Frm_Relclientes</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelCarne.pas">
+				<Form>Frm_relCarne</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelPatrimonio.pas">
+				<Form>frm_RelPatrimo</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelTiposaida.pas">
+				<Form>Frm_Despesas</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelCombustivel.pas">
+				<Form>Frm_RelPosto</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelTransporte.pas">
+				<Form>frm_RelTransporte</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelOficinas.pas">
+				<Form>Frm_RelOficinas</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelFuncionarios.pas">
+				<Form>Frm_RelFuncionarios</Form>
+			</DCCReference>
+			<DCCReference Include="U_Relatorios.pas">
+				<Form>Frm_RelDiversos</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelCaixa.pas">
+				<Form>frm_relCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelManutencao.pas">
+				<Form>Frm_RelManutencao</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelPagamento.pas">
+				<Form>Frm_relpagamento</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelAbastecimento.pas">
+				<Form>FRM_RELAbastecimento</Form>
+			</DCCReference>
+			<DCCReference Include="U_RelAgendamento.pas">
+				<Form>Frm_RelAgendamento</Form>
+			</DCCReference>
+			<DCCReference Include="U_fornecedor.pas">
+				<Form>frm_fornecedor</Form>
+			</DCCReference>
+			<DCCReference Include="U_contaspagar.pas">
+				<Form>frm_contaspagar</Form>
+			</DCCReference>
+			<DCCReference Include="U_ContasReceber.pas">
+				<Form>Frm_contasreceber</Form>
+			</DCCReference>
+			<DCCReference Include="U_Consultas.pas">
+				<Form>frm_consultasparc</Form>
+			</DCCReference>
+			<DCCReference Include="U_ContasPagas.pas">
+				<Form>Frm_pagamentodecontas</Form>
+			</DCCReference>
+			<DCCReference Include="U_Recebimentocontas.pas">
+				<Form>frm_Recebimentocontas</Form>
+			</DCCReference>
+			<DCCReference Include="U_Senha.pas">
+				<Form>frm_senha</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">Autoescola.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
